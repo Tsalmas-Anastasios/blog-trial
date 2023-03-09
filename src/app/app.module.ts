@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/posts/post/post.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const ROUTES = [
   {
@@ -41,7 +42,8 @@ const ROUTES = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
