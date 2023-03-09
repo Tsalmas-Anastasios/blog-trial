@@ -35,3 +35,5 @@ $title-font-size: 48px;
         font-size: $title-font-size - $i * 5;
     }
 }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
