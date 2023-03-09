@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/*Importing scss variables*/
+@import 'styles/variables/colors';
+
 $background-color: #585858;
 $text-color: #1e1e1e;
 $color-black: #000;
@@ -22,7 +29,7 @@ a {
 nav {
     background-color: $text-color;
     a {
-        color: $text-color;
+        color: $background-color;
         &:hover {
             opacity: 0.5
         }
@@ -35,5 +42,7 @@ $title-font-size: 48px;
         font-size: $title-font-size - $i * 5;
     }
 }
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+
+button {
+    background-color: $primary-color;
+}

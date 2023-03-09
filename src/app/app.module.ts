@@ -11,6 +11,24 @@ import { PostComponent } from './components/posts/post/post.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+const ROUTES = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'posts',
+    component: PostsComponent
+  },
+  {
+    path: 'authors',
+    component: AuthorsComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,28 +40,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'posts',
-        component: PostsComponent
-      },
-      {
-        path: 'posts/:id',
-        component: PostComponent
-      },
-      {
-        path: 'authors',
-        component: AuthorsComponent
-      },
-      {
-        path: '**',
-        component: PageNotFoundComponent
-      }
-    ]),
+    RouterModule.forRoot(ROUTES),
     NgbModule
   ],
   providers: [],
