@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+$background-color: #585858;
+$text-color: #1e1e1e;
+$color-black: #000;
+
+html, body {
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: $text-color;
+    &:hover {
+        color: $color-black;
+    }
+}
+
+nav {
+    background-color: $text-color;
+    a {
+        color: $text-color;
+        &:hover {
+            opacity: 0.5
+        }
+    }
+}
+
+$title-font-size: 48px;
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $title-font-size - $i * 5;
+    }
+}
