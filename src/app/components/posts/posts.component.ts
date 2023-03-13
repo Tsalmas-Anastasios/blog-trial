@@ -12,6 +12,8 @@ export class PostsComponent implements OnInit {
   public faUser = faUser;
   public faNewspaper = faNewspaper;
 
+  public postDate = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
